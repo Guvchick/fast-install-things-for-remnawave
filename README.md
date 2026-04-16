@@ -9,7 +9,6 @@
 | Скрипт | Назначение | Сервис |
 |--------|-----------|--------|
 | `fast_install_remnawave.bash` | Установка Remna Wave | remnawave/wave:latest |
-| `fast_install_beszel.bash` | Установка Beszel | Beszel monitoring |
 
 ---
 
@@ -47,7 +46,6 @@ sudo apt install curl -y
 ```bash
 cd /tmp
 curl -O https://your_repo_url/fast_install_remnawave.bash
-curl -O https://your_repo_url/fast_install_beszel.bash
 
 # Даем права на выполнение
 chmod +x fast_install_*.bash
@@ -58,7 +56,6 @@ chmod +x fast_install_*.bash
 # На локальной машине:
 scp fast_install_remnanode.bash user@your_server_ip:/tmp/
 scp fast_install_remnawave.bash user@your_server_ip:/tmp/
-scp fast_install_beszel.bash user@your_server_ip:/tmp/
 
 # На сервере:
 chmod +x /tmp/fast_install_*.bash
@@ -98,15 +95,6 @@ sudo bash /tmp/fast_install_remnawave.bash
 3. Создает `docker-compose.yml` конфигурацию
 4. Запускает контейнер
 5. Выводит логи установки
-
----
-
-### Запуск Beszel
-```bash
-sudo bash /tmp/fast_install_beszel.bash
-```
-
-**Примечание:** Скрипт `fast_install_beszel.bash` на данный момент пуст. Пожалуйста, добавьте конфигурацию для Beszel.
 
 ---
 
@@ -165,7 +153,6 @@ sudo bash /tmp/fast_install_remnanode.bash
 |--------|-------|------|
 | Remna Node | `http://your_server_ip:2222` | 2222 |
 | Remna Wave | `http://your_server_ip:PORT` | PORT (зависит от конфига) |
-| Beszel | `http://your_server_ip:PORT` | PORT (зависит от конфига) |
 
 ---
 
